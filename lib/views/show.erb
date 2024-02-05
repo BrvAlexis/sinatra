@@ -1,0 +1,23 @@
+
+<html>
+  <head>
+    <title>PAGE POTIN <%= @gossip&.id %> (debug)</title>
+  </head>
+  <body>
+    <% if @gossip %>
+      <h1>Debug: Contenu du gossip dans la vue show.erb</h1>
+      <pre><%= @gossip.inspect %></pre>
+      <h1>Voici la page du potin n°<%= @gossip&.id %> (debug)</h1>
+      
+      <p>Son auteur</p>
+      <%= @gossip.author %><br/>
+
+      <p>Le contenu du potin</p>
+      <%= @gossip.content %><br/>
+
+      <a href="/">Lien pour revenir à la page des potins</a>
+    <% else %>
+      <p>Le potin que vous recherchez n'existe pas.</p>
+    <% end %>
+  </body>
+</html>
