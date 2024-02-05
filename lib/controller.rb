@@ -18,17 +18,17 @@ class ApplicationController < Sinatra::Base
   get '/gossips/:id' do
     # Récupérer l'ID du potin depuis l'URL
     gossip_id = params['id'].to_i
-
-    puts "Debug: ID du potin extrait depuis l'URL - #{gossip_id}"
   
     # Appeler la méthode find de la classe Gossip pour obtenir le gossip correspondant à l'ID
     @gossip = Gossip.find(gossip_id)
-
-    # Afficher le numéro du potin dans le terminal
-  puts "Debug: Numéro du potin dans la route /gossips/:id - #{@gossip&.id}"
-
+  
+    # Passer l'ID du potin en tant que variable locale
+    @gossip_id = gossip_id
+  
     erb :show
   end
+
+    
   
 
 end

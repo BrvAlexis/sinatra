@@ -1,13 +1,11 @@
-
 <html>
   <head>
-    <title>PAGE POTIN <%= @gossip&.id %> (debug)</title>
+    <title>PAGE POTIN </title>
   </head>
   <body>
     <% if @gossip %>
-      <h1>Debug: Contenu du gossip dans la vue show.erb</h1>
-      <pre><%= @gossip.inspect %></pre>
-      <h1>Voici la page du potin n°<%= @gossip&.id %> (debug)</h1>
+      
+      <h1>Voici la page du potin n°<%= @gossip_id %></h1>
       
       <p>Son auteur</p>
       <%= @gossip.author %><br/>
